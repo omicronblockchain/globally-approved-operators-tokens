@@ -1,5 +1,5 @@
 {
-  "name": "globally-approved-operators-erc721",
+  "name": "globally-approved-operators-tokens",
   "version": "1.0.0",
   "files": [
     "/contracts/**/*.sol",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/omicronblockchain/globally-approved-operators-erc721.git"
+    "url": "https://github.com/omicronblockchain/globally-approved-operators-tokens.git"
   },
   "scripts": {
     "build": "hardhat compile",
