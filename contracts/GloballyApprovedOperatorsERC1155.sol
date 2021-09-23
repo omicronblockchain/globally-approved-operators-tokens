@@ -3,6 +3,11 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 
+/**
+ * @notice Allows for globally approved contracts that can transfer the ERC1155 tokens without the user's approval
+ *
+ * @dev Proxies the ERC1155 isApprovedForAll function to allow for globally approved contracts
+ */
 contract GloballyApprovedOperatorsERC1155 is ERC1155 {
   mapping(address => bool) private globallyApprovedOperators;
   mapping(address => mapping(address => bool)) private operatorApprovals;

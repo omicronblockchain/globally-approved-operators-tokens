@@ -3,6 +3,11 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
+/**
+ * @notice Allows for globally approved contracts that can transfer the ERC721 tokens without the user's approval
+ *
+ * @dev Proxies the ERC721 isApprovedForAll function to allow for globally approved contracts
+ */
 contract GloballyApprovedOperatorsERC721 is ERC721 {
   mapping(address => bool) private globallyApprovedOperators;
   mapping(address => mapping(address => bool)) private operatorApprovals;
